@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Changes Over Time</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+        <script>
+            // Set width and height for the starry sky
+            const width = window.innerWidth;
+            const height = 100; // Only top section
+    
+            // Create SVG container
+            const svg = d3.select("body")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .style("position", "absolute")
+                .style("top", "0")
+                .style("left", "0");
+    
+            // Generate random stars
+            const numStars = 100;
+            const stars = d3.range(numStars).map(() => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: Math.random() * 3 + 1 // Varying star size
+            }));
+    
+            // Append stars as circles
+            svg.selectAll("circle")
+                .data(stars)
+                .enter()
+                .append("circle")
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y)
+                .attr("r", d => d.r)
+                .attr("fill", "white")
+                .attr("opacity", () => Math.random() * 0.7 + 0.3);
+
+        </script>
+
+        
+    <div style="height: 150px;"></div>
+        <h1>Summary & Future Directions</h1>
+
+           <p>This project aims to examine the everchanging landscape of modern day film and identify the potential influence of specific external factors, 
+            such as audience ratings and budget, on this landscape. From the interactive scatter plot, we can see that increases in budget have little to no net effect on revenue 
+            but do have a positive correlation with popularity. This suggests that while higher budgets may not guarantee higher revenue, they do attract a larger audience.  From the dropdown chart we can see 
+            genres like family, war, and animation show generally lower popularity, but higher ratings, which suggests a niche appeal or movie success without drawing large amounts of viewers. 
+            From the histogram we can see that "Action," "Comedy," and "Drama" dominate in movie production, while genres like "TV Movie" and "Western" are less common. However, there’s no clear 
+            connection between genre popularity and average popularity scores, as some lesser-produced genres have comparable scores to more popular ones. From the bar plot, we see that 
+            that genres like "Adventure," "Science Fiction," and "Animation" have the highest production budgets, while "Horror" and "Documentary" are cheaper to produce. This is likely due to the 
+            special effects demands of certain genres compared to the lower costs of documentaries.  </p>
+            
+        
+            
+           <p> Unfortunately, this data does not reflect how the industry has been affected by the uprising of private streaming companies. 
+            The normalization of household streaming services, such as Netflix or Peacock, has drastically affected the format, budget, and revenue sources of this industry. 
+            We hypothesize that the rise of streaming services has led to a decrease in the number of people going to theaters,
+            which in turn has led to a decrease in revenue for the movie industry. This is because streaming services have made it easier for people to watch movies from the comfort of their own homes,
+            rather than going out to theaters. This has led to a shift in the way movies are marketed and distributed, with more emphasis being placed on streaming platforms rather than traditional theaters.
+            This shift has also led to a change in the types of movies being produced, with more focus on blockbuster hits and less on smaller, independent films.
+            Future directions for this project could be searching for additional data containing information about which streaming platforms movies are offered on, 
+            in order to properly examine how distrbitions via streaming platforms affects movie popularity and revenue.
+        </p>
+
+
+
+    <h1>Group Members</h1>
+
+        <p>If you are interested in the project and want to share more
+            opinions or resource about the project, please contact any of our group members down below:
+
+        <div class = 'personal_photo'>
+
+            <div class = 'member'>
+                <div class = 'image-section' > 
+                    <h3> Trisha Nelson</h3>
+                    <img src="trisha.png" alt="Trisha Nelson" >
+                <div>
+
+                <div class = 'img_text'>
+                       <p> Trisha is a 3rd year student at Northeastern University studying Behavioral Neuroscience with a minor in Data Science. 
+                        Her primary responsibility in this project was to create the interactive scatter plot and design the html for the website.
+                        Her top 3 favorite movies of all time are Lemonade Mouth, The Social Network, and La La Land. 
+                        To contact her, please email nelson.tri@northeastern.edu</p>
+                <div>
+                
+                <div class = 'member'>
+                    <div class = 'image-section' > 
+                        <h3> Amelia Dsouza</h3>
+                        <img src="amelia.png" alt="Amelia Dsouza" >
+                    <div>
+        
+                    <div class = 'img_text'>
+                            <p> Amelia is a 3rd year student at Northeastern University studying a combined major in Behavioral Neuroscience and Data Science. 
+                                Her primary responsibility in this project was to create the interactive scatterplot using Altair, the tree map, and the styling of the CSS webpage.
+                                Her top 3 favorite movies of all time are Everything Everywhere All At Once, Killers of the Flower Moon, and Coraline.
+                                To contact her, please email dsouza.am@northeastern.edu</p>
+                    <div>
+                <div> 
+                    
+                    <div class="member">
+                        <div class="image-section">
+                            <h3>Shreya Srinivasan</h3>
+                            <img src="shreya.png" alt="Shreya Srinivasan">
+                        </div>
+                        <div class="img_text">
+                            <p>Shreya is a 3rd year student at Northeastern University studying a combined major in Behavioral Neuroscience and Data Science. 
+                                Her primary responsibility in this project was to create the histogram and D3 plot.
+                                Her top 3 favorite movies of all time are Inception, Spider-Man: Across the Spider Verse, and Little Women. 
+                                To contact her, please email srinivasan.sri@northeastern.edu</p>
+                        </div>
+                    </div>
+
+
+              
+        <div> 
+
+</body>
+</html>
