@@ -37,4 +37,5 @@ added so that the user can easily see how trends in movie budgets drastically in
 it is evident that certain genres, like revenue, remain the same and others, like popularity, start to change with time. Additionally, these graphs were color 
 coded by year for viewers to easily distinguish between different time periods. Overall, these graphs function to demonstrate that higher budgets do not always 
 correlate to 'better' movies. A bigger movie budget is not an indicator for better revenue or better audience reviews, but may attract a larger audience.
- 
+
+Github Deployment Official Website Link: https://trisha-nelson-918.github.io/DS4200_Movie_Project/
